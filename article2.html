@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新手攻略：快速入门指南 - 像素精灵pokehunt官方网站</title>
+    <meta name="description" content="作为新手训练师，如何快速上手游戏？本攻略将为你提供详细的入门指导，帮助你迅速成为一名优秀的怪物训练师！">
+    <meta name="keywords" content="像素精灵, PokeHunt, 新手攻略, 入门指南, 怪物训练师, 游戏技巧">
+    <meta name="author" content="Pokegm">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="新手攻略：快速入门指南 - 像素精灵官方网站">
+    <meta property="og:description" content="作为新手训练师，如何快速上手游戏？本攻略将为你提供详细的入门指导，帮助你迅速成为一名优秀的怪物训练师！">
+    <meta property="og:image" content="../2.jpg">
+    <meta property="og:url" content="https://www.pokegm.com/articles/article2.html">
+    <meta property="og:type" content="article">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto { content-visibility: auto; }
+            .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+            .card-hover { transition: all 0.3s ease; }
+            .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+            .btn-hover { transition: all 0.3s ease; }
+            .btn-hover:hover { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        }
+    </style>
+    <link rel="icon" href="../logo.png" type="image/png">
+</head>
+<body class="bg-light text-dark">
+    <!-- 顶部固定导航栏 -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="../logo.png" alt="像素精灵pokehunt 标志" class="h-10 w-auto">
+                <h1 class="text-xl font-bold text-primary">像素精灵<span class="text-sm text-gray-500 ml-2">[官方网站]</span></h1>
+            </div>
+            <ul class="hidden md:flex items-center gap-6">
+                <li><a href="../index.html" class="font-medium hover:text-primary transition-colors">首页</a></li>
+                <li><a href="../features.html" class="font-medium hover:text-primary transition-colors">游戏特色</a></li>
+                <li><a href="../guide.html" class="font-medium hover:text-primary transition-colors">游戏攻略</a></li>
+                <li><a href="../codes.html" class="font-medium hover:text-primary transition-colors">兑换码</a></li>
+                <li><a href="../articles.html" class="font-medium hover:text-primary transition-colors">文章公告</a></li>
+                <li><a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="bg-primary text-white px-4 py-2 rounded-full font-medium btn-hover">立即下载</a></li>
+            </ul>
+            <div class="relative">
+                <button onclick="toggleLanguageDropdown()" class="flex items-center gap-2 border-2 border-primary text-primary px-3 py-1 rounded-full font-medium hover:bg-primary hover:text-white transition-colors">
+                    <span>简体中文</span>
+                    <span>▼</span>
+                </button>
+                <div id="languageDropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+                    <a href="article2.html" class="block px-4 py-2 hover:bg-light transition-colors">简体中文</a>
+                    <a href="https://www.pokegm.com/articles/article2.html" class="block px-4 py-2 hover:bg-light transition-colors">繁体中文</a>
+                    <a href="https://hongkong.pokegm.com/articles/article2.html" class="block px-4 py-2 hover:bg-light transition-colors">繁体中文(香港)</a>
+                    <a href="https://macau.pokegm.com/articles/article2.html" class="block px-4 py-2 hover:bg-light transition-colors">繁体中文(澳门)</a>
+                    <a href="https://korea.pokegm.com/articles/article2.html" class="block px-4 py-2 hover:bg-light transition-colors">한국어</a>
+                    <a href="https://singapore.pokegm.com/articles/article2.html" class="block px-4 py-2 hover:bg-light transition-colors">English</a>
+                    <a href="https://malaysia.pokegm.com/articles/article2.html" class="block px-4 py-2 hover:bg-light transition-colors">Malay</a>
+                    <a href="https://vietnam.pokegm.com/articles/article2.html" class="block px-4 py-2 hover:bg-light transition-colors">Tiếng Việt</a>
+                </div>
+            </div>
+            <button class="md:hidden" onclick="toggleMobileMenu()">
+                <div class="w-6 h-6 flex flex-col justify-between">
+                    <span class="block h-0.5 bg-dark"></span>
+                    <span class="block h-0.5 bg-dark"></span>
+                    <span class="block h-0.5 bg-dark"></span>
+                </div>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full opacity-0 invisible transition-all duration-300 z-40">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-4">
+                <a href="../index.html" class="font-medium hover:text-primary transition-colors py-2">首页</a>
+                <a href="../features.html" class="font-medium hover:text-primary transition-colors py-2">游戏特色</a>
+                <a href="../guide.html" class="font-medium hover:text-primary transition-colors py-2">游戏攻略</a>
+                <a href="../codes.html" class="font-medium hover:text-primary transition-colors py-2">兑换码</a>
+                <a href="../articles.html" class="font-medium hover:text-primary transition-colors py-2">文章公告</a>
+                <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="bg-primary text-white px-4 py-2 rounded-full font-medium text-center btn-hover">立即下载</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 文章内容 -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-8">
+                    <a href="../articles.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                        <i class="fa fa-arrow-left mr-2"></i> 返回文章列表
+                    </a>
+                </div>
+                <h1 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6">新手攻略：快速入门指南</h1>
+                <div class="flex items-center text-gray-500 mb-8">
+                    <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2026-01-21</span>
+                    <span><i class="fa fa-user mr-1"></i> 官方团队</span>
+                </div>
+                <div class="mb-8">
+                    <img src="../2.jpg" alt="像素精灵pokehunt 新手攻略" class="w-full h-80 object-cover rounded-2xl">
+                </div>
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg font-medium mb-4">亲爱的新手训练师：</p>
+                    <p class="mb-4">欢迎加入《像素精灵》的世界！作为一名新的怪物训练师，你可能会感到有些迷茫。别担心，本指南将帮助你快速上手游戏，成为一名优秀的训练师！</p>
+                    
+                    <h2 class="text-2xl font-bold mt-8 mb-4">1. 游戏开始</h2>
+                    <p class="mb-4">当你首次进入游戏时，你将需要选择你的初始精灵。游戏提供了三种不同属性的精灵供你选择：</p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li><span class="font-medium">火属性精灵</span> - 攻击力较高，适合喜欢主动进攻的玩家</li>
+                        <li><span class="font-medium">水属性精灵</span> - 防御力较强，适合喜欢稳健作战的玩家</li>
+                        <li><span class="font-medium">草属性精灵</span> - 拥有恢复能力，适合喜欢持久战的玩家</li>
+                    </ul>
+                    <p class="mb-4">选择初始精灵后，你将开始你的冒险之旅。</p>
+                    
+                    <h2 class="text-2xl font-bold mt-8 mb-4">2. 基本操作</h2>
+                    <p class="mb-4">游戏的基本操作非常简单：</p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li><span class="font-medium">移动</span> - 通过虚拟摇杆或点击屏幕来移动你的角色</li>
+                        <li><span class="font-medium">战斗</span> - 当遇到野生精灵时，会自动进入战斗模式</li>
+                        <li><span class="font-medium">收服精灵</span> - 在战斗中，当野生精灵血量较低时，使用精灵球可以收服它</li>
+                        <li><span class="font-medium">背包</span> - 查看和使用你拥有的物品</li>
+                        <li><span class="font-medium">精灵中心</span> - 恢复精灵的生命值和能量</li>
+                    </ul>
+                    
+                    <h2 class="text-2xl font-bold mt-8 mb-4">3. 精灵培养</h2>
+                    <p class="mb-4">要想让你的精灵变得更强大，你需要进行以下操作：</p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li><span class="font-medium">战斗升级</span> - 让精灵参与战斗，获得经验值升级</li>
+                        <li><span class="font-medium">技能学习</span> - 精灵升级后会学习新的技能</li>
+                        <li><span class="font-medium">进化</span> - 当精灵达到一定等级时，会进化为更强大的形态</li>
+                        <li><span class="font-medium">装备道具</span> - 为精灵装备合适的道具，提升其能力</li>
+                    </ul>
+                    
+                    <h2 class="text-2xl font-bold mt-8 mb-4">4. 游戏资源</h2>
+                    <p class="mb-4">游戏中有多种资源，合理利用这些资源可以让你事半功倍：</p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li><span class="font-medium">金币</span> - 用于购买物品和升级</li>
+                        <li><span class="font-medium">水晶</span> - 稀有货币，用于购买高级物品</li>
+                        <li><span class="font-medium">经验值</span> - 用于精灵升级</li>
+                        <li><span class="font-medium">体力</span> - 参与战斗和探索需要消耗体力</li>
+                    </ul>
+                    
+                    <h2 class="text-2xl font-bold mt-8 mb-4">5. 进阶技巧</h2>
+                    <p class="mb-4">掌握以下技巧，可以让你在游戏中更加强大：</p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li><span class="font-medium">属性相克</span> - 了解不同属性之间的相克关系，在战斗中选择合适的精灵</li>
+                        <li><span class="font-medium">队伍搭配</span> - 组建一个包含多种属性精灵的队伍，以应对不同的挑战</li>
+                        <li><span class="font-medium">道馆挑战</span> - 挑战道馆可以获得丰厚的奖励，提升你的声望</li>
+                        <li><span class="font-medium">活动参与</span> - 积极参与游戏中的活动，获得稀有奖励</li>
+                    </ul>
+                    
+                    <h2 class="text-2xl font-bold mt-8 mb-4">6. 常见问题</h2>
+                    <p class="mb-4">以下是新手常见的问题及解答：</p>
+                    <div class="bg-light rounded-xl p-6 mb-6">
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Q: 如何快速获得金币？</h3>
+                                <p>A: 完成日常任务、挑战副本、出售多余的物品都可以获得金币。</p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Q: 精灵如何进化？</h3>
+                                <p>A: 当精灵达到一定等级时，会自动进化。有些精灵需要特定的道具才能进化。</p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Q: 如何获得稀有精灵？</h3>
+                                <p>A: 探索稀有区域、参与活动、使用高级精灵球都可以提高获得稀有精灵的几率。</p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Q: 体力不足怎么办？</h3>
+                                <p>A: 体力会随时间自动恢复，也可以使用体力药水或水晶购买体力。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="mb-4">希望本指南能帮助你快速上手《像素精灵》！祝你在游戏中玩得愉快，成为一名顶尖的怪物训练师！</p>
+                    <p class="font-medium">像素精灵开发团队</p>
+                    <p>2026年1月21日</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关文章 -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8 text-center">相关文章</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-md card-hover">
+                    <div class="h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                        <img src="../1.jpg" alt="像素精灵pokehunt 文章图片" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">游戏上线公告</h3>
+                    <p class="text-gray-600 mb-4">《PokeHunt》于2026年1月20日上午10点正式上线！经典宠物小精灵，细致还原数百种精灵的原生姿态与冒险核心！</p>
+                    <a href="article1.html" class="text-primary font-medium hover:underline">阅读更多</a>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-md card-hover">
+                    <div class="h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                        <img src="../3.jpg" alt="像素精灵pokehunt 文章图片" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">兑换码使用指南</h3>
+                    <p class="text-gray-600 mb-4">如何使用游戏兑换码？本指南将详细介绍兑换码的使用方法和注意事项，让你轻松领取游戏福利！</p>
+                    <a href="article3.html" class="text-primary font-medium hover:underline">阅读更多</a>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-md card-hover">
+                    <div class="h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                        <img src="../4.jpg" alt="像素精灵pokehunt 文章图片" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">精灵培养技巧</h3>
+                    <p class="text-gray-600 mb-4">如何高效培养精灵？本攻略将为你提供精灵培养的详细技巧，帮助你打造最强战队！</p>
+                    <a href="#" class="text-primary font-medium hover:underline">阅读更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="../logo.png" alt="像素精灵pokehunt 标志" class="h-10 w-auto">
+                        <h3 class="text-xl font-bold">像素精灵</h3>
+                    </div>
+                    <p class="text-gray-400">复古像素怪物收集养成游戏，重温童年热血回忆！</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">快速链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="../features.html" class="text-gray-400 hover:text-white transition-colors">游戏特色</a></li>
+                        <li><a href="../guide.html" class="text-gray-400 hover:text-white transition-colors">游戏攻略</a></li>
+                        <li><a href="../codes.html" class="text-gray-400 hover:text-white transition-colors">兑换码</a></li>
+                        <li><a href="../articles.html" class="text-gray-400 hover:text-white transition-colors">文章公告</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">联系方式</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2"><i class="fa fa-weixin"></i> <span class="text-gray-400">小茂爱手游</span></li>
+                        <li class="flex items-center gap-2"><i class="fa fa-qq"></i> <span class="text-gray-400">1054734634</span></li>
+                        <li class="flex items-center gap-2"><i class="fa fa-link"></i> <a href="https://discord.gg/Pvkxz96V" class="text-gray-400 hover:text-white transition-colors">Discord社区</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">关注我们</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-wechat"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-qq"></i>
+                        </a>
+                        <a href="https://discord.gg/Pvkxz96V" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-comment"></i>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <img src="https://dh.nnii.cn/qqqun.jpg" alt="像素精灵pokehunt QQ群二维码" class="w-32 h-32 rounded-lg">
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Pokehunt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 语言选择器下拉菜单
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.classList.toggle('opacity-0');
+            dropdown.classList.toggle('invisible');
+        }
+
+        // 移动端菜单
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('opacity-0');
+            mobileMenu.classList.toggle('invisible');
+        }
+
+        // 点击页面其他地方关闭下拉菜单
+        window.addEventListener('click', function(event) {
+            const languageSelector = document.querySelector('.relative');
+            const mobileMenuButton = document.querySelector('.md\:hidden');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const languageDropdown = document.getElementById('languageDropdown');
+
+            if (!languageSelector.contains(event.target)) {
+                languageDropdown.classList.add('opacity-0', 'invisible');
+            }
+
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('opacity-0', 'invisible');
+            }
+        });
+    </script>
+</body>
+</html>
