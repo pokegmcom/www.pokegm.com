@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏攻略 - 像素精灵pokehunt官方网站</title>
+    <meta name="description" content="像素精灵游戏攻略，包含新手指南、进阶技巧、精灵培养、战斗策略等详细内容，帮助你成为顶尖的怪物训练师！">
+    <meta name="keywords" content="像素精灵, PokeHunt, 游戏攻略, 新手指南, 精灵培养, 战斗策略, 进阶技巧">
+    <meta name="author" content="Pokegm">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="游戏攻略 - 像素精灵官方网站">
+    <meta property="og:description" content="像素精灵游戏攻略，包含新手指南、进阶技巧、精灵培养、战斗策略等详细内容，帮助你成为顶尖的怪物训练师！">
+    <meta property="og:image" content="3.jpg">
+    <meta property="og:url" content="https://www.pokegm.com/guide.html">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto { content-visibility: auto; }
+            .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+            .card-hover { transition: all 0.3s ease; }
+            .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+            .btn-hover { transition: all 0.3s ease; }
+            .btn-hover:hover { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        }
+    </style>
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body class="bg-light text-dark">
+    <!-- 顶部固定导航栏 -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="像素精灵pokehunt 标志" class="h-10 w-auto">
+                <h1 class="text-xl font-bold text-primary">像素精灵<span class="text-sm text-gray-500 ml-2">[官方网站]</span></h1>
+            </div>
+            <ul class="hidden md:flex items-center gap-6">
+                <li><a href="index.html" class="font-medium hover:text-primary transition-colors">首页</a></li>
+                <li><a href="features.html" class="font-medium hover:text-primary transition-colors">游戏特色</a></li>
+                <li><a href="guide.html" class="font-medium text-primary border-b-2 border-primary">游戏攻略</a></li>
+                <li><a href="codes.html" class="font-medium hover:text-primary transition-colors">兑换码</a></li>
+                <li><a href="articles.html" class="font-medium hover:text-primary transition-colors">文章公告</a></li>
+                <li><a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="bg-primary text-white px-4 py-2 rounded-full font-medium btn-hover">立即下载</a></li>
+            </ul>
+            <div class="relative">
+                <button onclick="toggleLanguageDropdown()" class="flex items-center gap-2 border-2 border-primary text-primary px-3 py-1 rounded-full font-medium hover:bg-primary hover:text-white transition-colors">
+                    <span>简体中文</span>
+                    <span>▼</span>
+                </button>
+                <div id="languageDropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+                    <a href="guide.html" class="block px-4 py-2 hover:bg-light transition-colors">简体中文</a>
+                    <a href="https://www.pokegm.com/guide.html" class="block px-4 py-2 hover:bg-light transition-colors">繁体中文</a>
+                    <a href="https://hongkong.pokegm.com/guide.html" class="block px-4 py-2 hover:bg-light transition-colors">繁体中文(香港)</a>
+                    <a href="https://macau.pokegm.com/guide.html" class="block px-4 py-2 hover:bg-light transition-colors">繁体中文(澳门)</a>
+                    <a href="https://korea.pokegm.com/guide.html" class="block px-4 py-2 hover:bg-light transition-colors">한국어</a>
+                    <a href="https://singapore.pokegm.com/guide.html" class="block px-4 py-2 hover:bg-light transition-colors">English</a>
+                    <a href="https://malaysia.pokegm.com/guide.html" class="block px-4 py-2 hover:bg-light transition-colors">Malay</a>
+                    <a href="https://vietnam.pokegm.com/guide.html" class="block px-4 py-2 hover:bg-light transition-colors">Tiếng Việt</a>
+                </div>
+            </div>
+            <button class="md:hidden" onclick="toggleMobileMenu()">
+                <div class="w-6 h-6 flex flex-col justify-between">
+                    <span class="block h-0.5 bg-dark"></span>
+                    <span class="block h-0.5 bg-dark"></span>
+                    <span class="block h-0.5 bg-dark"></span>
+                </div>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full opacity-0 invisible transition-all duration-300 z-40">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-4">
+                <a href="index.html" class="font-medium hover:text-primary transition-colors py-2">首页</a>
+                <a href="features.html" class="font-medium hover:text-primary transition-colors py-2">游戏特色</a>
+                <a href="guide.html" class="font-medium text-primary border-l-4 border-primary pl-3">游戏攻略</a>
+                <a href="codes.html" class="font-medium hover:text-primary transition-colors py-2">兑换码</a>
+                <a href="articles.html" class="font-medium hover:text-primary transition-colors py-2">文章公告</a>
+                <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="bg-primary text-white px-4 py-2 rounded-full font-medium text-center btn-hover">立即下载</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark/80 to-dark/60 z-10"></div>
+        <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('3.jpg');"></div>
+        <div class="container mx-auto px-4 relative z-20 text-center">
+            <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white mb-6 text-shadow">游戏攻略</h1>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 max-w-3xl mx-auto">全面的游戏攻略指南，帮助你成为顶尖的怪物训练师！</p>
+            <a href="#guide-content" class="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg btn-hover">开始探索</a>
+        </div>
+    </section>
+
+    <!-- 攻略内容 -->
+    <section id="guide-content" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-center mb-16">攻略指南</h2>
+            
+            <!-- 新手指南 -->
+            <div class="mb-24">
+                <h3 class="text-2xl font-bold mb-8 text-primary flex items-center">
+                    <i class="fa fa-star mr-3"></i> 新手指南
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-light rounded-2xl p-6 shadow-md card-hover">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-download text-2xl text-primary"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">游戏下载与安装</h4>
+                        <p class="text-gray-600 mb-4">从官方网站下载游戏安装包，按照提示完成安装。支持Android、iOS、PC和鸿蒙平台。</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>确保设备满足最低配置要求</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>下载完成后点击安装</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>首次启动需要加载资源</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-light rounded-2xl p-6 shadow-md card-hover">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-user-plus text-2xl text-primary"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">创建角色</h4>
+                        <p class="text-gray-600 mb-4">进入游戏后，创建你的训练师角色，选择性别、外观和名字。</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>选择喜欢的角色外观</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>输入个性化的训练师名字</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>确认角色信息后进入游戏</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-light rounded-2xl p-6 shadow-md card-hover">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-paw text-2xl text-primary"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">选择初始精灵</h4>
+                        <p class="text-gray-600 mb-4">游戏开始时，你将获得一次选择初始精灵的机会，有三种属性的精灵供你选择。</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>火属性：攻击力较高</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>水属性：防御力较强</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>草属性：拥有恢复能力</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 基础操作 -->
+            <div class="mb-24">
+                <h3 class="text-2xl font-bold mb-8 text-primary flex items-center">
+                    <i class="fa fa-gamepad mr-3"></i> 基础操作
+                </h3>
+                <div class="bg-light rounded-2xl p-8 shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">移动与探索</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fa fa-arrows text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold mb-1">虚拟摇杆</h5>
+                                        <p class="text-gray-600">使用屏幕左下角的虚拟摇杆控制角色移动。</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fa fa-search text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold mb-1">点击移动</h5>
+                                        <p class="text-gray-600">点击屏幕任意位置，角色会自动移动到该位置。</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fa fa-map text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold mb-1">地图</h5>
+                                        <p class="text-gray-600">点击屏幕右上角的地图按钮，查看当前区域地图和世界地图。</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">战斗系统</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fa fa-bolt text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold mb-1">技能使用</h5>
+                                        <p class="text-gray-600">战斗中，点击技能按钮使用对应技能。</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fa fa-exchange text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold mb-1">精灵切换</h5>
+                                        <p class="text-gray-600">点击精灵图标切换当前出战精灵。</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fa fa-briefcase text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold mb-1">道具使用</h5>
+                                        <p class="text-gray-600">点击道具按钮使用背包中的道具。</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 精灵培养 -->
+            <div class="mb-24">
+                <h3 class="text-2xl font-bold mb-8 text-primary flex items-center">
+                    <i class="fa fa-line-chart mr-3"></i> 精灵培养
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">升级与进化</h4>
+                        <p class="text-gray-600 mb-6">通过战斗获得经验值，提升精灵等级。当精灵达到一定等级时，会进化为更强大的形态。</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-check-circle text-secondary mt-1"></i>
+                                <span>参与战斗获得经验值</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-check-circle text-secondary mt-1"></i>
+                                <span>使用经验糖果快速升级</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-check-circle text-secondary mt-1"></i>
+                                <span>进化后精灵属性大幅提升</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-check-circle text-secondary mt-1"></i>
+                                <span>有些精灵有多种进化形态</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">技能培养</h4>
+                        <p class="text-gray-600 mb-6">精灵可以学习和升级各种技能，提升战斗能力。</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-check-circle text-secondary mt-1"></i>
+                                <span>升级时自动学习新技能</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-check-circle text-secondary mt-1"></i>
+                                <span>使用技能学习机学习特定技能</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-check-circle text-secondary mt-1"></i>
+                                <span>技能可以通过使用进行升级</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-check-circle text-secondary mt-1"></i>
+                                <span>合理搭配技能组合提高战斗力</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 战斗策略 -->
+            <div class="mb-24">
+                <h3 class="text-2xl font-bold mb-8 text-primary flex items-center">
+                    <i class="fa fa-shield mr-3"></i> 战斗策略
+                </h3>
+                <div class="bg-light rounded-2xl p-8 shadow-md">
+                    <h4 class="text-xl font-bold mb-6">属性相克表</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-primary text-white">
+                                    <th class="border border-gray-300 p-3 text-left">攻击属性</th>
+                                    <th class="border border-gray-300 p-3 text-left">克制</th>
+                                    <th class="border border-gray-300 p-3 text-left">被克制</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 p-3 font-medium">火</td>
+                                    <td class="border border-gray-300 p-3">草、冰、虫</td>
+                                    <td class="border border-gray-300 p-3">水、岩石、地面</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 p-3 font-medium">水</td>
+                                    <td class="border border-gray-300 p-3">火、地面、岩石</td>
+                                    <td class="border border-gray-300 p-3">草、电</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 p-3 font-medium">草</td>
+                                    <td class="border border-gray-300 p-3">水、地面、岩石</td>
+                                    <td class="border border-gray-300 p-3">火、冰、虫、飞行、毒</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 p-3 font-medium">电</td>
+                                    <td class="border border-gray-300 p-3">水、飞行</td>
+                                    <td class="border border-gray-300 p-3">地面</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 p-3 font-medium">冰</td>
+                                    <td class="border border-gray-300 p-3">草、地面、飞行、龙</td>
+                                    <td class="border border-gray-300 p-3">火、水、草、钢</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 p-3 font-medium">岩石</td>
+                                    <td class="border border-gray-300 p-3">火、冰、飞行、虫</td>
+                                    <td class="border border-gray-300 p-3">水、草、钢、地面</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 p-3 font-medium">地面</td>
+                                    <td class="border border-gray-300 p-3">火、电、岩石、毒、钢</td>
+                                    <td class="border border-gray-300 p-3">水、草、冰</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 p-3 font-medium">飞行</td>
+                                    <td class="border border-gray-300 p-3">草、虫、毒</td>
+                                    <td class="border border-gray-300 p-3">电、冰、岩石</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 p-3 font-medium">虫</td>
+                                    <td class="border border-gray-300 p-3">草、 Psychic、Dark</td>
+                                    <td class="border border-gray-300 p-3">火、飞行、岩石</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 p-3 font-medium">毒</td>
+                                    <td class="border border-gray-300 p-3">草</td>
+                                    <td class="border border-gray-300 p-3">地面、 Psychic</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold mb-4">战斗技巧</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-lightbulb-o text-accent mt-1"></i>
+                                <span>根据对手属性选择克制的精灵出战</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-lightbulb-o text-accent mt-1"></i>
+                                <span>合理运用技能组合，最大化伤害输出</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-lightbulb-o text-accent mt-1"></i>
+                                <span>注意技能的冷却时间，避免技能真空期</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-lightbulb-o text-accent mt-1"></i>
+                                <span>适时使用道具恢复精灵的生命值和能量</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa fa-lightbulb-o text-accent mt-1"></i>
+                                <span>观察对手的行动模式，制定相应的应对策略</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 高级攻略 -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8 text-primary flex items-center">
+                    <i class="fa fa-trophy mr-3"></i> 高级攻略
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-light rounded-2xl p-6 shadow-md card-hover">
+                        <h4 class="text-xl font-bold mb-4">道馆挑战</h4>
+                        <p class="text-gray-600 mb-4">道馆是游戏中的重要挑战，每个道馆都有特定属性的精灵和强大的馆主。</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>了解道馆的属性类型，准备克制的精灵</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>提升精灵等级，确保战斗力足够</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>携带足够的恢复道具</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>挑战成功后获得道馆徽章和丰厚奖励</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-light rounded-2xl p-6 shadow-md card-hover">
+                        <h4 class="text-xl font-bold mb-4">PVP对战</h4>
+                        <p class="text-gray-600 mb-4">与其他玩家进行实时对战，展示你的训练师实力。</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>组建多元化的队伍，应对不同的对手</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>了解当前版本的强势精灵和战术</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>观察对手的队伍配置，调整战术</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>参与排行榜竞争，获得稀有奖励</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section class="py-20 bg-primary/10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6">立即体验</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">现在就下载《像素精灵》，开始你的怪物训练师之旅！</p>
+            <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg btn-hover">立即下载</a>
+            <p class="text-gray-500 mt-4">支持平台: Android、苹果、PC、鸿蒙</p>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="logo.png" alt="像素精灵pokehunt 标志" class="h-10 w-auto">
+                        <h3 class="text-xl font-bold">像素精灵</h3>
+                    </div>
+                    <p class="text-gray-400">复古像素怪物收集养成游戏，重温童年热血回忆！</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">快速链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-white transition-colors">游戏特色</a></li>
+                        <li><a href="guide.html" class="text-gray-400 hover:text-white transition-colors">游戏攻略</a></li>
+                        <li><a href="codes.html" class="text-gray-400 hover:text-white transition-colors">兑换码</a></li>
+                        <li><a href="articles.html" class="text-gray-400 hover:text-white transition-colors">文章公告</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">联系方式</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2"><i class="fa fa-weixin"></i> <span class="text-gray-400">小茂爱手游</span></li>
+                        <li class="flex items-center gap-2"><i class="fa fa-qq"></i> <span class="text-gray-400">1054734634</span></li>
+                        <li class="flex items-center gap-2"><i class="fa fa-link"></i> <a href="https://discord.gg/Pvkxz96V" class="text-gray-400 hover:text-white transition-colors">Discord社区</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">关注我们</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-wechat"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-qq"></i>
+                        </a>
+                        <a href="https://discord.gg/Pvkxz96V" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-comment"></i>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <img src="https://dh.nnii.cn/qqqun.jpg" alt="像素精灵pokehunt QQ群二维码" class="w-32 h-32 rounded-lg">
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Pokehunt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 语言选择器下拉菜单
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.classList.toggle('opacity-0');
+            dropdown.classList.toggle('invisible');
+        }
+
+        // 移动端菜单
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('opacity-0');
+            mobileMenu.classList.toggle('invisible');
+        }
+
+        // 点击页面其他地方关闭下拉菜单
+        window.addEventListener('click', function(event) {
+            const languageSelector = document.querySelector('.relative');
+            const mobileMenuButton = document.querySelector('.md\:hidden');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const languageDropdown = document.getElementById('languageDropdown');
+
+            if (!languageSelector.contains(event.target)) {
+                languageDropdown.classList.add('opacity-0', 'invisible');
+            }
+
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('opacity-0', 'invisible');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章公告 - 像素精灵pokehunt官方网站</title>
+    <meta name="description" content="像素精灵官方网站文章公告列表，包含游戏上线公告、新手攻略、兑换码使用指南等最新游戏资讯和攻略内容。">
+    <meta name="keywords" content="像素精灵, PokeHunt, 文章公告, 游戏资讯, 新手攻略, 兑换码指南, 游戏更新">
+    <meta name="author" content="Pokegm">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="文章公告 - 像素精灵官方网站">
+    <meta property="og:description" content="像素精灵官方网站文章公告列表，包含游戏上线公告、新手攻略、兑换码使用指南等最新游戏资讯和攻略内容。">
+    <meta property="og:image" content="1.jpg">
+    <meta property="og:url" content="https://www.pokegm.com/articles.html">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto { content-visibility: auto; }
+            .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+            .card-hover { transition: all 0.3s ease; }
+            .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+            .btn-hover { transition: all 0.3s ease; }
+            .btn-hover:hover { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        }
+    </style>
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body class="bg-light text-dark">
+    <!-- 顶部固定导航栏 -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="像素精灵pokehunt 标志" class="h-10 w-auto">
+                <h1 class="text-xl font-bold text-primary">像素精灵<span class="text-sm text-gray-500 ml-2">[官方网站]</span></h1>
+            </div>
+            <ul class="hidden md:flex items-center gap-6">
+                <li><a href="index.html" class="font-medium hover:text-primary transition-colors">首页</a></li>
+                <li><a href="features.html" class="font-medium hover:text-primary transition-colors">游戏特色</a></li>
+                <li><a href="guide.html" class="font-medium hover:text-primary transition-colors">游戏攻略</a></li>
+                <li><a href="codes.html" class="font-medium hover:text-primary transition-colors">兑换码</a></li>
+                <li><a href="articles.html" class="font-medium text-primary border-b-2 border-primary">文章公告</a></li>
+                <li><a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="bg-primary text-white px-4 py-2 rounded-full font-medium btn-hover">立即下载</a></li>
+            </ul>
+            <div class="relative">
+                <button onclick="toggleLanguageDropdown()" class="flex items-center gap-2 border-2 border-primary text-primary px-3 py-1 rounded-full font-medium hover:bg-primary hover:text-white transition-colors">
+                    <span>简体中文</span>
+                    <span>▼</span>
+                </button>
+                <div id="languageDropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+                    <a href="articles.html" class="block px-4 py-2 hover:bg-light transition-colors">简体中文</a>
+                    <a href="https://www.pokegm.com/articles.html" class="block px-4 py-2 hover:bg-light transition-colors">繁体中文</a>
+                    <a href="https://hongkong.pokegm.com/articles.html" class="block px-4 py-2 hover:bg-light transition-colors">繁体中文(香港)</a>
+                    <a href="https://macau.pokegm.com/articles.html" class="block px-4 py-2 hover:bg-light transition-colors">繁体中文(澳门)</a>
+                    <a href="https://korea.pokegm.com/articles.html" class="block px-4 py-2 hover:bg-light transition-colors">한국어</a>
+                    <a href="https://singapore.pokegm.com/articles.html" class="block px-4 py-2 hover:bg-light transition-colors">English</a>
+                    <a href="https://malaysia.pokegm.com/articles.html" class="block px-4 py-2 hover:bg-light transition-colors">Malay</a>
+                    <a href="https://vietnam.pokegm.com/articles.html" class="block px-4 py-2 hover:bg-light transition-colors">Tiếng Việt</a>
+                </div>
+            </div>
+            <button class="md:hidden" onclick="toggleMobileMenu()">
+                <div class="w-6 h-6 flex flex-col justify-between">
+                    <span class="block h-0.5 bg-dark"></span>
+                    <span class="block h-0.5 bg-dark"></span>
+                    <span class="block h-0.5 bg-dark"></span>
+                </div>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full opacity-0 invisible transition-all duration-300 z-40">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-4">
+                <a href="index.html" class="font-medium hover:text-primary transition-colors py-2">首页</a>
+                <a href="features.html" class="font-medium hover:text-primary transition-colors py-2">游戏特色</a>
+                <a href="guide.html" class="font-medium hover:text-primary transition-colors py-2">游戏攻略</a>
+                <a href="codes.html" class="font-medium hover:text-primary transition-colors py-2">兑换码</a>
+                <a href="articles.html" class="font-medium text-primary border-l-4 border-primary pl-3">文章公告</a>
+                <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="bg-primary text-white px-4 py-2 rounded-full font-medium text-center btn-hover">立即下载</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark/80 to-dark/60 z-10"></div>
+        <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('1.jpg');"></div>
+        <div class="container mx-auto px-4 relative z-20 text-center">
+            <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white mb-6 text-shadow">文章公告</h1>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 max-w-3xl mx-auto">了解最新的游戏资讯和攻略内容，成为顶尖的怪物训练师！</p>
+            <a href="#articles" class="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg btn-hover">浏览文章</a>
+        </div>
+    </section>
+
+    <!-- 文章列表 -->
+    <section id="articles" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-center mb-16">最新文章</h2>
+            
+            <!-- 文章筛选 -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-2 rounded-full bg-primary text-white font-medium">全部</button>
+                <button class="px-6 py-2 rounded-full bg-light text-dark font-medium hover:bg-primary/10 transition-colors">游戏公告</button>
+                <button class="px-6 py-2 rounded-full bg-light text-dark font-medium hover:bg-primary/10 transition-colors">新手攻略</button>
+                <button class="px-6 py-2 rounded-full bg-light text-dark font-medium hover:bg-primary/10 transition-colors">进阶技巧</button>
+                <button class="px-6 py-2 rounded-full bg-light text-dark font-medium hover:bg-primary/10 transition-colors">活动资讯</button>
+            </div>
+            
+            <!-- 文章卡片 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 文章1 -->
+                <div class="bg-light rounded-2xl overflow-hidden shadow-md card-hover">
+                    <div class="h-64 overflow-hidden">
+                        <img src="1.jpg" alt="像素精灵pokehunt 游戏上线公告" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2026-01-20</span>
+                            <span><i class="fa fa-tag mr-1"></i> 游戏公告</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">游戏上线公告</h3>
+                        <p class="text-gray-600 mb-4">《PokeHunt》于2026年1月20日上午10点正式上线!经典宠物小精灵，细致还原数百种精灵的原生姿态与冒险核心！</p>
+                        <a href="articles/article1.html" class="text-primary font-medium hover:underline flex items-center">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 文章2 -->
+                <div class="bg-light rounded-2xl overflow-hidden shadow-md card-hover">
+                    <div class="h-64 overflow-hidden">
+                        <img src="2.jpg" alt="像素精灵pokehunt 新手攻略：快速入门指南" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2026-01-21</span>
+                            <span><i class="fa fa-tag mr-1"></i> 新手攻略</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">新手攻略：快速入门指南</h3>
+                        <p class="text-gray-600 mb-4">作为新手训练师，如何快速上手游戏？本攻略将为你提供详细的入门指导，帮助你迅速成为一名优秀的怪物训练师！</p>
+                        <a href="articles/article2.html" class="text-primary font-medium hover:underline flex items-center">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 文章3 -->
+                <div class="bg-light rounded-2xl overflow-hidden shadow-md card-hover">
+                    <div class="h-64 overflow-hidden">
+                        <img src="3.jpg" alt="像素精灵pokehunt 兑换码使用指南" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2026-01-22</span>
+                            <span><i class="fa fa-tag mr-1"></i> 新手攻略</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">兑换码使用指南</h3>
+                        <p class="text-gray-600 mb-4">如何使用游戏兑换码？本指南将详细介绍兑换码的使用方法和注意事项，让你轻松领取游戏福利！</p>
+                        <a href="articles/article3.html" class="text-primary font-medium hover:underline flex items-center">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 文章4 -->
+                <div class="bg-light rounded-2xl overflow-hidden shadow-md card-hover">
+                    <div class="h-64 overflow-hidden">
+                        <img src="4.jpg" alt="像素精灵pokehunt 精灵培养技巧" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2026-01-23</span>
+                            <span><i class="fa fa-tag mr-1"></i> 进阶技巧</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">精灵培养技巧</h3>
+                        <p class="text-gray-600 mb-4">如何高效培养精灵？本攻略将为你提供精灵培养的详细技巧，帮助你打造最强战队！</p>
+                        <a href="#" class="text-primary font-medium hover:underline flex items-center">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 文章5 -->
+                <div class="bg-light rounded-2xl overflow-hidden shadow-md card-hover">
+                    <div class="h-64 overflow-hidden">
+                        <img src="5.jpg" alt="像素精灵pokehunt 道馆挑战攻略" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2026-01-24</span>
+                            <span><i class="fa fa-tag mr-1"></i> 进阶技巧</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">道馆挑战攻略</h3>
+                        <p class="text-gray-600 mb-4">如何挑战道馆并获得胜利？本攻略将为你提供道馆挑战的详细策略，帮助你顺利获得道馆徽章！</p>
+                        <a href="#" class="text-primary font-medium hover:underline flex items-center">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 文章6 -->
+                <div class="bg-light rounded-2xl overflow-hidden shadow-md card-hover">
+                    <div class="h-64 overflow-hidden">
+                        <img src="1.jpg" alt="像素精灵pokehunt 春节活动公告" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2026-01-25</span>
+                            <span><i class="fa fa-tag mr-1"></i> 活动资讯</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">春节活动公告</h3>
+                        <p class="text-gray-600 mb-4">春节期间，游戏将推出丰富的活动和福利，让你在假期中享受更多游戏乐趣！</p>
+                        <a href="#" class="text-primary font-medium hover:underline flex items-center">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 分页 -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex items-center gap-2">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-colors">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white">1</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-colors">2</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-colors">3</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-colors">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section class="py-20 bg-primary/10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6">立即体验</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">现在就下载《像素精灵》，开始你的怪物训练师之旅！</p>
+            <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg btn-hover">立即下载</a>
+            <p class="text-gray-500 mt-4">支持平台: Android、苹果、PC、鸿蒙</p>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="logo.png" alt="像素精灵pokehunt 标志" class="h-10 w-auto">
+                        <h3 class="text-xl font-bold">像素精灵</h3>
+                    </div>
+                    <p class="text-gray-400">复古像素怪物收集养成游戏，重温童年热血回忆！</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">快速链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-white transition-colors">游戏特色</a></li>
+                        <li><a href="guide.html" class="text-gray-400 hover:text-white transition-colors">游戏攻略</a></li>
+                        <li><a href="codes.html" class="text-gray-400 hover:text-white transition-colors">兑换码</a></li>
+                        <li><a href="articles.html" class="text-gray-400 hover:text-white transition-colors">文章公告</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">联系方式</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2"><i class="fa fa-weixin"></i> <span class="text-gray-400">小茂爱手游</span></li>
+                        <li class="flex items-center gap-2"><i class="fa fa-qq"></i> <span class="text-gray-400">1054734634</span></li>
+                        <li class="flex items-center gap-2"><i class="fa fa-link"></i> <a href="https://discord.gg/Pvkxz96V" class="text-gray-400 hover:text-white transition-colors">Discord社区</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">关注我们</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-wechat"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-qq"></i>
+                        </a>
+                        <a href="https://discord.gg/Pvkxz96V" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-comment"></i>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <img src="https://dh.nnii.cn/qqqun.jpg" alt="像素精灵pokehunt QQ群二维码" class="w-32 h-32 rounded-lg">
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Pokehunt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 语言选择器下拉菜单
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.classList.toggle('opacity-0');
+            dropdown.classList.toggle('invisible');
+        }
+
+        // 移动端菜单
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('opacity-0');
+            mobileMenu.classList.toggle('invisible');
+        }
+
+        // 点击页面其他地方关闭下拉菜单
+        window.addEventListener('click', function(event) {
+            const languageSelector = document.querySelector('.relative');
+            const mobileMenuButton = document.querySelector('.md\:hidden');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const languageDropdown = document.getElementById('languageDropdown');
+
+            if (!languageSelector.contains(event.target)) {
+                languageDropdown.classList.add('opacity-0', 'invisible');
+            }
+
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('opacity-0', 'invisible');
+            }
+        });
+    </script>
+</body>
+</html>
