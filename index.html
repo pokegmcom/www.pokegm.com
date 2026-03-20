@@ -8,7 +8,7 @@
     <meta name="keywords" content="像素精灵, PokeHunt, 复古像素, 怪物收集, 养成游戏, 开放世界, 道馆, 策略游戏, 游戏攻略, 像素精灵官方网站">
     <meta name="author" content="Pokegm">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="像素精灵 - 官方网站">
+    <meta property="og:title" content="像素精灵pokehunt - 官方网站">
     <meta property="og:description" content="像素精灵(PokeHunt) - 使用复古像素画风的经典怪物收集养成游戏！一款致敬经典的回合制RPG游戏，玩家将扮演怪物训练师，在开放世界中探索未知，收服数百种独特怪物，打造专属战队，并与道馆领袖和传奇训练师展开精彩对决，重温童年热血回忆！">
     <meta property="og:image" content="logo.png">
     <meta property="og:url" content="https://www.pokegm.com">
@@ -38,6 +38,12 @@
             .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
             .btn-hover { transition: all 0.3s ease; }
             .btn-hover:hover { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+            .line-clamp-3 {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
         }
     </style>
     <link rel="icon" href="logo.png" type="image/png">
@@ -96,9 +102,9 @@
     </nav>
 
     <!-- Hero 区域 -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-dark/80 to-dark/60 z-10"></div>
-        <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('1.jpg');"></div>
+        <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('1.jpg');" loading="eager"></div>
         <div class="container mx-auto px-4 relative z-20 text-center">
             <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white mb-6 text-shadow">像素精灵 - 复古像素怪物收集养成游戏</h1>
             <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 max-w-3xl mx-auto">致敬经典怪物游戏的回合制RPG游戏，以复古像素画风重现记忆中的魅力！在开放世界中探索未知，收服数百种独特怪物，打造专属战队！</p>
@@ -154,22 +160,22 @@
         <div class="container mx-auto px-4">
             <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-center mb-12">游戏预览</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="rounded-2xl overflow-hidden shadow-md card-hover">
-                    <img src="1.jpg" alt="像素精灵pokehunt 游戏预览1" class="w-full h-64 object-cover">
+                <div class="rounded-2xl overflow-hidden shadow-md card-hover bg-gray-100">
+                    <img src="1.jpg" alt="像素精灵pokehunt 游戏预览1" class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-4 bg-white">
                         <h3 class="text-lg font-bold mb-2">开放世界探索</h3>
                         <p class="text-gray-600">在广阔的地图中自由探索，发现新的区域和怪物</p>
                     </div>
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-md card-hover">
-                    <img src="2.jpg" alt="像素精灵pokehunt 游戏预览2" class="w-full h-64 object-cover">
+                <div class="rounded-2xl overflow-hidden shadow-md card-hover bg-gray-100">
+                    <img src="2.jpg" alt="像素精灵pokehunt 游戏预览2" class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-4 bg-white">
                         <h3 class="text-lg font-bold mb-2">怪物收集</h3>
                         <p class="text-gray-600">收服各种独特的怪物，组建属于你的强大战队</p>
                     </div>
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-md card-hover">
-                    <img src="3.jpg" alt="像素精灵pokehunt 游戏预览3" class="w-full h-64 object-cover">
+                <div class="rounded-2xl overflow-hidden shadow-md card-hover bg-gray-100">
+                    <img src="3.jpg" alt="像素精灵pokehunt 游戏预览3" class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-4 bg-white">
                         <h3 class="text-lg font-bold mb-2">策略战斗</h3>
                         <p class="text-gray-600">运用属性相克和技能组合，战胜强大的对手</p>
@@ -197,30 +203,42 @@
         <div class="container mx-auto px-4">
             <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-center mb-12">最新公告</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-light rounded-2xl p-6 shadow-md card-hover">
+                <article class="bg-light rounded-2xl p-6 shadow-md card-hover">
                     <div class="h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-                        <img src="1.jpg" alt="像素精灵pokehunt 文章图片" class="w-full h-full object-cover">
+                        <img src="1.jpg" alt="像素精灵pokehunt 文章图片" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <span class="mr-3"><i class="fa fa-calendar mr-1"></i>2026-01-20</span>
+                        <span class="bg-primary/10 text-primary px-2 py-0.5 rounded">公告</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">游戏上线公告</h3>
-                    <p class="text-gray-600 mb-4">《PokeHunt》於2026年1月20日上午10點正式上線!经典宠物小精灵，细致还原数百种精灵的原生姿态与冒险核心！</p>
-                    <a href="articles/article1.html" class="text-primary font-medium hover:underline">阅读更多</a>
-                </div>
-                <div class="bg-light rounded-2xl p-6 shadow-md card-hover">
+                    <p class="text-gray-600 mb-4 line-clamp-3">《PokeHunt》於2026年1月20日上午10點正式上線!经典宠物小精灵，细致还原数百种精灵的原生姿态与冒险核心！</p>
+                    <a href="articles/article1.html" class="text-primary font-medium hover:underline inline-flex items-center">阅读更多 <i class="fa fa-arrow-right ml-1 text-sm"></i></a>
+                </article>
+                <article class="bg-light rounded-2xl p-6 shadow-md card-hover">
                     <div class="h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-                        <img src="2.jpg" alt="像素精灵pokehunt 文章图片" class="w-full h-full object-cover">
+                        <img src="2.jpg" alt="像素精灵pokehunt 文章图片" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <span class="mr-3"><i class="fa fa-calendar mr-1"></i>2026-01-21</span>
+                        <span class="bg-secondary/10 text-secondary px-2 py-0.5 rounded">攻略</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">新手攻略：快速入门指南</h3>
-                    <p class="text-gray-600 mb-4">作为新手训练师，如何快速上手游戏？本攻略将为你提供详细的入门指导，帮助你迅速成为一名优秀的怪物训练师！</p>
-                    <a href="articles/article2.html" class="text-primary font-medium hover:underline">阅读更多</a>
-                </div>
-                <div class="bg-light rounded-2xl p-6 shadow-md card-hover">
+                    <p class="text-gray-600 mb-4 line-clamp-3">作为新手训练师，如何快速上手游戏？本攻略将为你提供详细的入门指导，帮助你迅速成为一名优秀的怪物训练师！</p>
+                    <a href="articles/article2.html" class="text-primary font-medium hover:underline inline-flex items-center">阅读更多 <i class="fa fa-arrow-right ml-1 text-sm"></i></a>
+                </article>
+                <article class="bg-light rounded-2xl p-6 shadow-md card-hover">
                     <div class="h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-                        <img src="3.jpg" alt="像素精灵pokehunt 文章图片" class="w-full h-full object-cover">
+                        <img src="3.jpg" alt="像素精灵pokehunt 文章图片" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500 mb-2">
+                        <span class="mr-3"><i class="fa fa-calendar mr-1"></i>2026-01-22</span>
+                        <span class="bg-accent/20 text-dark px-2 py-0.5 rounded">指南</span>
                     </div>
                     <h3 class="text-xl font-bold mb-3">兑换码使用指南</h3>
-                    <p class="text-gray-600 mb-4">如何使用游戏兑换码？本指南将详细介绍兑换码的使用方法和注意事项，让你轻松领取游戏福利！</p>
-                    <a href="articles/article3.html" class="text-primary font-medium hover:underline">阅读更多</a>
-                </div>
+                    <p class="text-gray-600 mb-4 line-clamp-3">如何使用游戏兑换码？本指南将详细介绍兑换码的使用方法和注意事项，让你轻松领取游戏福利！</p>
+                    <a href="articles/article3.html" class="text-primary font-medium hover:underline inline-flex items-center">阅读更多 <i class="fa fa-arrow-right ml-1 text-sm"></i></a>
+                </article>
             </div>
             <div class="text-center mt-12">
                 <a href="articles.html" class="inline-block bg-primary text-white px-6 py-3 rounded-full font-medium btn-hover">查看更多文章</a>
